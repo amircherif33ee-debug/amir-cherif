@@ -4,51 +4,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>L1benj Cherif</title>
+  <title>L1benj Cherif | Web Developer</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f0f4f8;
-      color: #222;
+      color: white;
+      background: #080b18;
       text-align: center;
+      min-height: 100vh;
     }
 
     header {
-      background: #1877f2;
-      color: white;
-      padding: 40px 20px;
+      padding: 22px;
+      background: rgba(15, 20, 40, 0.9);
+      border-bottom: 1px solid #252447;
     }
 
-    h1 {
-      margin-bottom: 10px;
-      font-size: 32px;
+    header p {
+      color: #a5b4fc;
+      margin: 0;
+      letter-spacing: 3px;
+      font-size: 13px;
     }
 
     main {
-      padding: 40px 20px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.6;
+      min-height: 75vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 18px;
+      background:
+        radial-gradient(circle at top left, #312064 0%, transparent 40%),
+        radial-gradient(circle at bottom right, #073b58 0%, transparent 40%),
+        #080b18;
     }
 
     .welcome {
-      background: white;
-      max-width: 600px;
-      margin: auto;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      max-width: 650px;
+      padding: 45px 25px;
+      border: 1px solid #38325f;
+      border-radius: 22px;
+      background: rgba(18, 22, 45, 0.8);
+      box-shadow: 0 0 35px rgba(112, 72, 255, 0.15);
+      animation: appear 1s ease-out;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .welcome:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 0 45px rgba(112, 72, 255, 0.35);
+    }
+
+    h1 {
+      font-size: clamp(30px, 7vw, 52px);
+      margin: 0 0 15px;
+      background: linear-gradient(90deg, #a78bfa, #38bdf8, #f0abfc);
+      background-size: 200% auto;
+      color: #a78bfa;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: colors 5s linear infinite;
+    }
+
+    h2 {
+      color: #67e8f9;
+      font-size: 22px;
+    }
+
+    .welcome p {
+      color: #cbd5e1;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 22px;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      background: linear-gradient(90deg, #7c3aed, #0284c7);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .tag:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 25px #7c3aed;
     }
 
     footer {
-      margin-top: 40px;
-      padding: 20px;
-      background: #222;
-      color: white;
+      padding: 22px;
+      color: #94a3b8;
+      border-top: 1px solid #252447;
+      font-size: 14px;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes colors {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
@@ -56,21 +137,28 @@
 <body>
 
   <header>
-    <h1>Salam 👋</h1>
-    <p>Marhba bik f site dyali!</p>
+    <p>MY PERSONAL WEBSITE</p>
   </header>
 
   <main>
-    <div class="welcome">
+    <section class="welcome">
+      <h1>Salam 👋</h1>
       <h2>I'm L1benj Cherif</h2>
-      <p>Salam, ana L1benj Cherif.</p>
-      <p>Kan3llam Web Development 💻</p>
-      <p>Hada howa awel site dyali, w mazal kan-t3llam w kan-t9ddem!</p>
-    </div>
+
+      <p>
+        Marhba bik f site dyali!
+        <br>
+        Ana kan3llam Web Development 💻
+        <br>
+        Kan-t3llam HTML w CSS, w kanbni lmosta9bal dyali f programmation.
+      </p>
+
+      <span class="tag">Future Web Developer 🚀</span>
+    </section>
   </main>
 
   <footer>
-    <p>© 2026 L1benj Cherif</p>
+    © 2026 L1benj Cherif — Made with ❤️
   </footer>
 
 </body>
