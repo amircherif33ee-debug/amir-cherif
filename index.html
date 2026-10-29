@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +15,8 @@
       margin: 0;
       min-height: 100vh;
       font-family: Arial, sans-serif;
-      color: white;
       background: #080b18;
+      color: white;
       display: flex;
       flex-direction: column;
     }
@@ -25,9 +24,9 @@
     main {
       flex: 1;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 25px 15px;
+      align-items: center;
+      padding: 25px;
       text-align: center;
       background:
         radial-gradient(circle at top left, #312064, transparent 45%),
@@ -36,26 +35,18 @@
     }
 
     .welcome {
-      max-width: 650px;
-      width: 100%;
-      padding: 40px 20px;
+      padding: 45px 30px;
       border: 1px solid #38325f;
       border-radius: 20px;
       background: #12162ddd;
       box-shadow: 0 0 30px #7048ff33;
       animation: appear 1s ease-out;
-      transition: 0.3s;
-    }
-
-    .welcome:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 40px #7048ff66;
     }
 
     h1 {
-      font-size: clamp(45px, 9vw, 65px);
+      margin: 0 0 30px;
+      font-size: clamp(50px, 10vw, 75px);
       font-weight: 900;
-      margin: 0 0 25px;
       background: linear-gradient(90deg, #a78bfa, #38bdf8, #f0abfc);
       background-size: 200% auto;
       color: #a78bfa;
@@ -65,31 +56,30 @@
       animation: colors 5s linear infinite;
     }
 
-    h2 {
-      color: #67e8f9;
-      font-size: 27px;
-    }
-
-    p {
-      color: #cbd5e1;
-      font-size: 17px;
-      line-height: 1.8;
-    }
-
-    .tag {
+    .button {
       display: inline-block;
-      margin-top: 18px;
-      padding: 12px 22px;
+      padding: 14px 35px;
+      border: none;
       border-radius: 30px;
       background: linear-gradient(90deg, #7c3aed, #0284c7);
+      color: white;
+      font-size: 17px;
       font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px #7c3aed;
     }
 
     footer {
-      padding: 20px;
+      padding: 18px;
       text-align: center;
       color: #94a3b8;
-      border-top: 1px solid #252447;
+      font-size: 13px;
     }
 
     @keyframes appear {
@@ -114,15 +104,10 @@
 <body>
   <main>
     <section class="welcome">
-      <h1>Salam 👋</h1>
-      <h2> L1benj Cherif</h2>
-
-      <p>Marhba bik f site dyali!</p>
-       
-         
-      </p>
-
-      <div class="tag">Future Web Developer 🚀</div>
+      <h1>Salam</h1>
+      <a class="button" href="https://github.com/amircherif33ee-debug">
+        Click Me
+      </a>
     </section>
   </main>
 
@@ -131,3 +116,4 @@
   </footer>
 </body>
 </html>
+
