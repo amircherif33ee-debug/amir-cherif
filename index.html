@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080b18">
-  <title>L1BENJ CHERIF</title>
+  <meta name="theme-color" content="#080008">
+  <title>L1BENJ CHERIF ☠️</title>
 
   <style>
     * {
@@ -20,9 +20,12 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: white;
-      background: #080b18;
+      background:
+        radial-gradient(ellipse at top left, #3b0764, transparent 48%),
+        radial-gradient(ellipse at bottom right, #082f49, transparent 48%),
+        #080008;
     }
 
     .glow {
@@ -33,20 +36,20 @@
       filter: blur(100px);
       opacity: 0.4;
       pointer-events: none;
-      animation: float 8s ease-in-out infinite alternate;
+      animation: float 7s ease-in-out infinite alternate;
     }
 
     .glow-one {
       top: -100px;
       left: -100px;
-      background: #7c3aed;
+      background: #a21caf;
     }
 
     .glow-two {
       right: -100px;
       bottom: -100px;
-      background: #0284c7;
-      animation-delay: -4s;
+      background: #0891b2;
+      animation-delay: -3s;
     }
 
     main {
@@ -56,80 +59,84 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 25px;
+      padding: 24px;
       text-align: center;
     }
 
     .welcome {
       width: 100%;
-      max-width: 650px;
+      max-width: 700px;
       animation: entrance 1s ease both;
     }
 
     .tagline {
-      margin-bottom: 22px;
-      color: #c4b5fd;
+      margin-bottom: 25px;
+      color: #f0abfc;
       font-size: 12px;
       letter-spacing: 5px;
-      text-transform: uppercase;
     }
 
     h1 {
-      font-size: clamp(55px, 13vw, 100px);
+      font-size: clamp(42px, 10vw, 82px);
       font-weight: 900;
-      letter-spacing: -3px;
+      line-height: 1.3;
+      letter-spacing: 1px;
       background: linear-gradient(
         90deg,
-        #a78bfa,
+        #fb7185,
+        #c084fc,
         #38bdf8,
-        #f0abfc,
-        #a78bfa
+        #fb7185
       );
       background-size: 300% auto;
-      color: #a78bfa;
+      color: #c084fc;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: gradient-flow 5s linear infinite;
-      filter: drop-shadow(0 0 20px #8b5cf644);
+      filter: drop-shadow(0 0 18px #e879f944);
+      animation: gradient-flow 5s linear infinite,
+                 danger-pulse 2s ease-in-out infinite;
     }
 
     .subtitle {
-      margin: 22px auto 30px;
-      color: #a5b4cc;
+      margin: 24px auto 30px;
+      color: #cbd5e1;
       font-size: clamp(14px, 3vw, 17px);
       line-height: 1.8;
     }
 
     button {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #a78bfa66;
+      border: 1px solid #e879f988;
       border-radius: 50px;
       padding: 15px 38px;
-      background: linear-gradient(110deg, #7c3aed, #2563eb);
+      background: linear-gradient(110deg, #86198f, #1d4ed8);
       color: white;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 0 25px #7c3aed44;
+      box-shadow: 0 0 25px #a21caf55;
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
     button:hover {
       transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 0 35px #7c3aedaa;
+      box-shadow: 0 0 35px #d946efaa;
     }
 
     button:active {
       transform: scale(0.97);
     }
 
+    button:focus-visible {
+      outline: 2px solid #67e8f9;
+      outline-offset: 5px;
+    }
+
     #message {
-      min-height: 45px;
+      min-height: 48px;
       margin-top: 30px;
       color: #67e8f9;
-      font-size: clamp(24px, 6vw, 38px);
+      font-size: clamp(28px, 7vw, 48px);
       font-weight: 900;
       overflow-wrap: anywhere;
     }
@@ -138,23 +145,17 @@
       animation: pop 0.7s ease both;
     }
 
-    .heart {
-      display: inline-block;
-      color: #fb7185;
-      animation: heartbeat 1s ease-in-out infinite;
-    }
-
     footer {
       position: relative;
       z-index: 1;
       padding: 20px 12px;
       text-align: center;
-      color: #8490a8;
+      color: #94a3b8;
       font-size: 13px;
     }
 
     footer span {
-      color: #c4b5fd;
+      color: #e9d5ff;
     }
 
     @keyframes gradient-flow {
@@ -164,12 +165,8 @@
     }
 
     @keyframes float {
-      from {
-        transform: translate(0, 0);
-      }
-      to {
-        transform: translate(45px, 35px);
-      }
+      from { transform: translate(0, 0); }
+      to { transform: translate(45px, 35px); }
     }
 
     @keyframes entrance {
@@ -183,10 +180,19 @@
       }
     }
 
+    @keyframes danger-pulse {
+      0%, 100% {
+        filter: drop-shadow(0 0 12px #e879f944);
+      }
+      50% {
+        filter: drop-shadow(0 0 28px #fb7185aa);
+      }
+    }
+
     @keyframes pop {
       from {
         opacity: 0;
-        transform: translateY(18px) scale(0.9);
+        transform: translateY(18px) scale(0.85);
       }
       to {
         opacity: 1;
@@ -194,24 +200,15 @@
       }
     }
 
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.25); }
-    }
-
     @media (max-width: 480px) {
       .glow {
-        width: 220px;
-        height: 220px;
+        width: 210px;
+        height: 210px;
         filter: blur(75px);
       }
 
-      h1 {
-        letter-spacing: -2px;
-      }
-
       button {
-        padding: 14px 32px;
+        padding: 14px 30px;
       }
     }
 
@@ -230,16 +227,16 @@
 
   <main>
     <section class="welcome">
-      <p class="tagline">WELCOME TO MY WORLD</p>
+      <p class="tagline">⚠️ WELCOME TO MY WORLD ⚠️</p>
 
-      <h1>Salam</h1>
+      <h1>9wdtiha ☠️</h1>
 
       <p class="subtitle">
-        Welcome to the world of L1BENJ CHERIF ✨
+        L1BENJ CHERIF — NO LIMITS 🔥
       </p>
 
       <button id="welcomeButton" type="button">
-        Click Me ✨
+        Click Me ☠️
       </button>
 
       <div id="message" aria-live="polite"></div>
@@ -247,7 +244,7 @@
   </main>
 
   <footer>
-    © 2026 <span>L1BENJ CHERIF</span>. All rights reserved.
+    © 2026 <span>L1BENJ CHERIF</span> ☠️
   </footer>
 
   <script>
@@ -258,11 +255,10 @@
       message.classList.remove("show");
       void message.offsetWidth;
 
-      message.innerHTML =
-        'Salam Oumaima <span class="heart">♥</span>';
-
+      message.textContent = "9wdtiha ☠️";
       message.classList.add("show");
-      button.textContent = "Welcome! ✨";
+
+      button.textContent = "DANGER MODE ☠️";
     });
   </script>
 </body>
