@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +16,8 @@
       margin: 0;
       min-height: 100vh;
       font-family: Arial, sans-serif;
-      background: #080b18;
       color: white;
+      background: #080b18;
       display: flex;
       flex-direction: column;
     }
@@ -26,8 +27,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 25px 15px;
       text-align: center;
-      padding: 30px 20px;
       background:
         radial-gradient(circle at top left, #312064, transparent 45%),
         radial-gradient(circle at bottom right, #073b58, transparent 45%),
@@ -35,26 +36,26 @@
     }
 
     .welcome {
-      width: 100%;
       max-width: 650px;
-      padding: 45px 25px;
+      width: 100%;
+      padding: 40px 20px;
       border: 1px solid #38325f;
-      border-radius: 22px;
-      background: rgba(18, 22, 45, 0.85);
-      box-shadow: 0 0 30px rgba(112, 72, 255, 0.15);
+      border-radius: 20px;
+      background: #12162ddd;
+      box-shadow: 0 0 30px #7048ff33;
       animation: appear 1s ease-out;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: 0.3s;
     }
 
     .welcome:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 0 40px rgba(112, 72, 255, 0.4);
+      transform: translateY(-6px);
+      box-shadow: 0 0 40px #7048ff66;
     }
 
     h1 {
-      margin: 0 0 25px;
-      font-size: clamp(42px, 8vw, 65px);
+      font-size: clamp(45px, 9vw, 65px);
       font-weight: 900;
+      margin: 0 0 25px;
       background: linear-gradient(90deg, #a78bfa, #38bdf8, #f0abfc);
       background-size: 200% auto;
       color: #a78bfa;
@@ -65,44 +66,36 @@
     }
 
     h2 {
-      font-size: 28px;
       color: #67e8f9;
-      margin-bottom: 20px;
+      font-size: 27px;
     }
 
     p {
-      font-size: 17px;
       color: #cbd5e1;
+      font-size: 17px;
       line-height: 1.8;
     }
 
     .tag {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
+      margin-top: 18px;
+      padding: 12px 22px;
       border-radius: 30px;
       background: linear-gradient(90deg, #7c3aed, #0284c7);
       font-weight: bold;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .tag:hover {
-      transform: scale(1.06);
-      box-shadow: 0 0 25px #7c3aed;
     }
 
     footer {
+      padding: 20px;
       text-align: center;
-      padding: 22px;
       color: #94a3b8;
       border-top: 1px solid #252447;
-      font-size: 14px;
     }
 
     @keyframes appear {
       from {
         opacity: 0;
-        transform: translateY(25px);
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
@@ -115,29 +108,18 @@
         background-position: 200% center;
       }
     }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
-      }
-    }
   </style>
 </head>
 
 <body>
-
   <main>
     <section class="welcome">
-      <h1><strong>Salam 👋</strong></h1>
-
-      <h2>I'm L1benj Cherif</h2>
+      <h1>Salam 👋</h1>
+      <h2> L1benj Cherif</h2>
 
       <p>Marhba bik f site dyali!</p>
-
-      <p>
-        Ana kan3llam Web Development 💻<br>
-        Kan-t3llam HTML w CSS, w kanbni lmosta9bal dyali f programmation.
+       
+         
       </p>
 
       <div class="tag">Future Web Developer 🚀</div>
@@ -147,7 +129,5 @@
   <footer>
     © 2026 L1benj Cherif
   </footer>
-
 </body>
 </html>
-
